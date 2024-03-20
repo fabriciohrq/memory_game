@@ -9,3 +9,39 @@ body{
     /* vh = 1% viewport height | vw = 1% viewport width */
     background-color: #98ABEE;
 }
+
+img{
+    width: 98px;
+}
+
+.memory-game{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+}
+
+.memory-card{
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    /* border: 2px solid aqua;*/
+    transform: scale(1);
+}
+
+.memory-card:active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-card, .back-card{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 4px;
+    background: blue;
+}
