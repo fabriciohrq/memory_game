@@ -7,11 +7,8 @@
 body{
     height: 100vh;
     /* vh = 1% viewport height | vw = 1% viewport width */
-    background-color: #98ABEE;
-}
-
-img{
-    width: 98px;
+    display: flex;
+    background: #201658;
 }
 
 .memory-game{
@@ -25,21 +22,22 @@ img{
 
 .memory-card{
     width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    height: calc(40% - 10px);
     margin: 5px;
     position: relative;
     /* border: 2px solid aqua;*/
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 
 .memory-card:active{
-    transform: scale(.97);
+    transform: scale(0.97);
     transition: transform .2s;
 }
 
-.front-card{
+.memory-card.flip{
     transform: rotateY(180deg);
 }
 
@@ -48,11 +46,17 @@ img{
     height: 100%;
     padding: 20px;
     position: absolute;
-    border-radius: 4px;
-    background: blue;
+    border-radius: 8px;
+    background: #98ABEE;
     backface-visibility: hidden;
 }
 
-.memory-card.flip{
+.front-card{
     transform: rotateY(180deg);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
